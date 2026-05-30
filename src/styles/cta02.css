@@ -1,0 +1,111 @@
+/* --- REVERSE CTA SECTION (Image Right, Text Left) --- */
+.cta-reverse-section {
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+/* Background for the text side to give an editorial contrast */
+.bg-warm-ivory {
+  background-color: #ffffff; 
+  height: 100%;
+}
+
+/* Image styling */
+.cta-rev-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  min-height: 550px; /* Thoda aur lamba banaya hai premium look ke liye */
+}
+
+.cta-rev-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.cta-rev-image-wrapper:hover .cta-rev-img {
+  transform: scale(1.05);
+}
+
+/* Text Content Wrapper */
+.cta-rev-content-wrapper {
+  padding: 12% 15%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.cta-rev-subtitle {
+  font-size: 0.8rem;
+  font-weight: 600; /* Bumped weight so the gold pops */
+  color: var(--lk-gold); /* Brand Gold */
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.cta-rev-subtitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 1px;
+  background-color: var(--lk-teal); /* Brand Teal Accent */
+}
+
+.cta-rev-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.2rem; 
+  font-weight: 600; /* Matched headers to previous sections */
+  color: var(--lk-teal); /* Brand Teal */
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+.cta-rev-desc {
+  font-size: 0.95rem;
+  color: var(--lk-text); /* Brand Muted Text */
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/* Premium Solid Button */
+.cta-btn-solid {
+  display: inline-block;
+  background-color: var(--lk-teal); /* Brand Teal Background */
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  padding: 16px 40px;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  border: 1px solid var(--lk-teal); /* Brand Teal Border */
+}
+
+.cta-btn-solid:hover {
+  background-color: var(--lk-gold); /* Brand Gold on Hover */
+  border-color: var(--lk-gold);
+  color: #ffffff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 991px) {
+  .cta-rev-image-wrapper { min-height: 400px; }
+  .cta-rev-content-wrapper { padding: 10% 20px; text-align: center; align-items: center; }
+  .cta-rev-subtitle::after { left: 50%; transform: translateX(-50%); }
+  .cta-rev-title { font-size: 2.5rem; }
+}

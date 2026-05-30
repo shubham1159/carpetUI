@@ -1,0 +1,74 @@
+/* --- LOOM & KNOT THEME VARIABLES --- */
+/* Agar ye variables tumne global CSS mein daal diye hain, toh is :root block ko hata sakte ho */
+:root {
+  --lk-teal: #1C3B47; 
+  --lk-gold: #C09D5B; 
+  --lk-text: #536770; 
+}
+
+/* --- TOP SELLERS SECTION --- */
+.top-sellers-section {
+  padding: 100px 0;
+  background-color: #FAFAFA;
+}
+
+/* Section Header (Consistent with premium theme) */
+.section-header-center {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.ts-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--lk-gold); /* Brand Gold */
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.ts-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem; /* Slightly larger for a bold, editorial look */
+  font-weight: 600;
+  color: var(--lk-teal); /* Brand Teal */
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
+}
+
+/* View All Button */
+.view-all-wrapper {
+  text-align: center;
+  /* margin-top: 50px; */
+}
+
+.btn-view-all {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--lk-teal); /* Matches heading */
+  text-decoration: none;
+  border-bottom: 1px solid var(--lk-teal);
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-view-all:hover {
+  color: var(--lk-gold); /* Smooth transition to gold on hover */
+  border-bottom-color: var(--lk-gold);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .top-sellers-section {
+    padding: 60px 0;
+  }
+  .ts-title {
+    font-size: 2.2rem;
+  }
+}

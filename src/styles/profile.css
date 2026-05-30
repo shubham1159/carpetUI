@@ -1,0 +1,328 @@
+/* --- LOOM & KNOT THEME VARIABLES --- */
+:root {
+  --lk-teal: #1C3B47; 
+  --lk-gold: #C09D5B; 
+  --lk-text: #536770; 
+  --lk-border: rgba(28, 59, 71, 0.15);
+}
+
+.lk-profile-page {
+  background-color: #FAFAFA; /* Off-white background to make cards pop */
+  min-height: 100vh;
+}
+
+/* --- SIDEBAR --- */
+.lk-profile-sidebar {
+  background-color: #ffffff;
+  border: 1px solid var(--lk-border);
+}
+
+.lk-user-header {
+  border-color: var(--lk-border) !important;
+}
+
+.lk-user-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid var(--lk-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FAFAFA;
+}
+
+.lk-profile-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--lk-teal);
+  letter-spacing: 0.05em;
+}
+
+.lk-profile-email {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  color: var(--lk-text);
+}
+
+.lk-vip-badge {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  background-color: var(--lk-teal);
+  color: #ffffff;
+  padding: 4px 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.lk-nav-divider {
+  height: 1px;
+  background-color: var(--lk-border);
+}
+
+.lk-nav-btn {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--lk-text);
+  padding: 12px 15px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+}
+
+.lk-nav-btn:hover {
+  color: var(--lk-teal);
+  background-color: #FAFAFA;
+}
+
+.lk-nav-btn.active {
+  color: var(--lk-teal);
+  font-weight: 600;
+  background-color: #FAFAFA;
+  border-left: 3px solid var(--lk-gold);
+}
+
+.lk-logout-btn {
+  color: #d9534f;
+}
+.lk-logout-btn:hover {
+  color: #c9302c;
+  background-color: #ffeeee;
+}
+
+/* --- MAIN CONTENT AREA --- */
+.lk-profile-content {
+  background-color: #ffffff;
+  border: 1px solid var(--lk-border);
+  min-height: 500px;
+}
+
+.lk-tab-fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lk-tab-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--lk-gold);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.lk-tab-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--lk-teal);
+}
+
+/* --- ORDERS TABLE --- */
+.lk-custom-table th {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--lk-text);
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid var(--lk-border);
+  padding: 15px 10px;
+  text-transform: uppercase;
+}
+
+.lk-custom-table td {
+  padding: 20px 10px;
+  border-bottom: 1px solid #f5f5f5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+}
+
+.lk-status-pill {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.lk-status-pill.processing {
+  background-color: #fcf4e3;
+  color: #a87b32;
+  border: 1px solid #e8d0a9;
+}
+
+.lk-status-pill.delivered {
+  background-color: #e5f0ef;
+  color: var(--lk-teal);
+  border: 1px solid #c0d9d6;
+}
+
+.lk-btn-view-order {
+  background: transparent;
+  border: none;
+  color: var(--lk-teal);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.lk-btn-view-order:hover {
+  color: var(--lk-gold);
+}
+
+/* --- SAVED ADDRESSES --- */
+.lk-address-card {
+  border: 1px solid var(--lk-border);
+  padding: 25px;
+  height: 100%;
+}
+
+.primary-address {
+  border-top: 3px solid var(--lk-gold);
+}
+
+.lk-address-tag {
+  display: inline-block;
+  background-color: var(--lk-teal);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  padding: 3px 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.lk-address-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--lk-teal);
+  letter-spacing: 0.05em;
+}
+
+.lk-address-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.lk-btn-link {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--lk-teal);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.lk-btn-link:hover {
+  color: var(--lk-gold);
+}
+
+.lk-btn-link.text-danger:hover {
+  color: #c9302c !important;
+}
+
+.lk-btn-add-address {
+  border: 1px dashed var(--lk-border);
+  background-color: transparent;
+  height: 100%;
+  min-height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--lk-teal);
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+}
+
+.lk-btn-add-address:hover {
+  border-color: var(--lk-gold);
+  background-color: #FAFAFA;
+}
+
+/* --- SETTINGS FORM --- */
+.lk-form-layout .lk-field-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lk-form-layout label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--lk-teal);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.lk-form-layout input {
+  padding: 14px 16px;
+  border: 1px solid var(--lk-border);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: var(--lk-teal);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.lk-form-layout input:focus {
+  border-color: var(--lk-teal);
+}
+
+.lk-btn-solid-gold {
+  background-color: var(--lk-gold);
+  color: #ffffff;
+  border: 1px solid var(--lk-gold);
+  padding: 16px 35px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.lk-btn-solid-gold:hover {
+  background-color: transparent;
+  color: var(--lk-gold);
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .lk-profile-page {
+    padding-top: 1rem !important;
+  }
+  .lk-tab-title {
+    font-size: 2rem;
+  }
+}

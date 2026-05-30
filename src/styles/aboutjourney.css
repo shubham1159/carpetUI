@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap');
+
+/* Main Wrapper Settings */
+.dance-about-wrapper {
+  background-color: #000000 !important; /* Pure Black Background */
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+}
+
+/* Subtle Red Accent Accent Top Bar */
+.accent-line {
+  width: 60px;
+  height: 4px;
+  background-color: #ff002b;
+}
+
+.redis-text {
+  color: #ff002b !important;
+  letter-spacing: 3px !important;
+}
+
+.dynamic-heading {
+  font-weight: 900 !important;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.text-highlight-red {
+  color: #ff002b;
+}
+
+.custom-para {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #cccccc !important;
+}
+
+.small-para {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #888888 !important;
+}
+
+/* Custom Red Stage Button */
+.action-btn-red {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ff002b;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  padding: 14px 32px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border-radius: 0px; /* Sharp corners for professional look */
+  transition: all 0.3s ease;
+  border: 1px solid #ff002b;
+}
+
+.action-btn-red:hover {
+  background-color: transparent;
+  color: #ff002b !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 0, 43, 0.2);
+}
+
+.action-btn-red svg {
+  transition: transform 0.3s ease;
+}
+
+.action-btn-red:hover svg {
+  transform: translateX(5px);
+}
+
+/* Matrix Grid Cards (Right Side) */
+.matrix-card {
+  background-color: #0d0d0d !important; /* Matte Black Card */
+  border: 1px solid #1a1a1a;
+  padding: 40px 20px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.matrix-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff002b !important;
+  background-color: #120305 !important; /* Super subtle dark red tint on hover */
+}
+
+.matrix-num {
+  display: block;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.matrix-card:hover .matrix-num {
+  color: #ff002b; /* Hover karne par number red ho jayega */
+}
+
+.matrix-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #666666;
+  letter-spacing: 1.5px;
+}
+
+/* Layout Asymmetry for Desktop screens */
+@media (min-width: 992px) {
+  .offset-md-top {
+    margin-top: 40px !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .dynamic-heading {
+    font-size: 2rem !important;
+  }
+}

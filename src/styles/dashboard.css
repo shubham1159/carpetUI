@@ -1,0 +1,479 @@
+/* ============================================================
+   NutriNest Member Dashboard — Symmetrical Design
+   ============================================================ */
+
+.dash-page {
+  background: var(--ivory);
+  padding: 50px 0 100px; /* Header space check kar lena */
+  min-height: 100vh;
+}
+
+.dash-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 320px 1fr; /* Fixed Sidebar & Flexible Content */
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* ── Sidebar Navigation ── */
+.dash-sidebar {
+  background: white;
+  border: 1px solid var(--border-light);
+  border-radius: 4px; /* Minimalist Symmetry */
+  padding: 40px 0;
+  position: sticky;
+  top: 120px;
+  box-shadow: 0 15px 35px rgba(62, 34, 9, 0.03);
+}
+
+.user-profile-summary {
+  text-align: center;
+  padding: 0 30px 30px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.user-avatar-circle {
+  width: 70px;
+  height: 70px;
+  background: var(--walnut);
+  color: var(--parchment);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: 3px solid var(--parchment);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.user-profile-summary h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: var(--walnut);
+  margin-bottom: 5px;
+}
+
+.user-profile-summary p {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--amber);
+  font-weight: 600;
+}
+
+.dash-nav {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.dash-nav a, .logout-btn {
+  padding: 16px 30px;
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.dash-nav a svg {
+  font-size: 1.2rem;
+}
+
+.dash-nav a.active {
+  background: var(--parchment);
+  color: var(--walnut);
+  border-left-color: var(--amber);
+  font-weight: 600;
+}
+
+.dash-nav a:hover:not(.active) {
+  color: var(--walnut);
+  background: #fafafa;
+  padding-left: 35px;
+}
+
+.logout-btn {
+  background: transparent;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 20px;
+  color: #c0392b; /* Subtle Red for Logout */
+}
+
+.logout-btn:hover {
+  background: #fff5f5;
+}
+
+/* ── Main Content Area ── */
+.dash-content {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.dash-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.stat-card {
+  background: white;
+  padding: 30px;
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--amber-light);
+}
+
+.stat-card span {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.stat-card h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  color: var(--walnut);
+  font-weight: 700;
+}
+
+/* ── Recent Orders Table ── */
+.recent-orders-sec {
+  background: white;
+  padding: 40px;
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+}
+
+.sec-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  color: var(--walnut);
+  margin-bottom: 30px;
+}
+
+.order-table-container {
+  overflow-x: auto;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table th {
+  text-align: left;
+  padding: 15px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  border-bottom: 2px solid var(--ivory);
+}
+
+.order-table td {
+  padding: 25px 15px;
+  border-bottom: 1px solid var(--ivory);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.95rem;
+  color: var(--walnut);
+}
+
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.processing { background: #fff9e6; color: #b58900; }
+.status-badge.delivered { background: #f0fdf4; color: #166534; }
+
+.view-order {
+  background: transparent;
+  border: 1px solid var(--border-light);
+  padding: 8px 16px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-order:hover {
+  background: var(--walnut);
+  color: white;
+  border-color: var(--walnut);
+}
+
+/* ── Animations & Responsive ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1100px) {
+  .dash-container { grid-template-columns: 1fr; }
+  .dash-sidebar { position: relative; top: 0; }
+  .dash-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .dash-stats-grid { grid-template-columns: 1fr; }
+  .recent-orders-sec { padding: 25px 15px; }
+  .stat-card h2 { font-size: 2.2rem; }
+}/* Dashboard.css updates */
+
+.dash-nav button {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-left: 3px solid transparent;
+  padding: 16px 30px;
+  text-align: left;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dash-nav button.active {
+  background: var(--parchment);
+  color: var(--walnut);
+  border-left-color: var(--amber);
+  font-weight: 600;
+}
+
+.dash-nav button:hover:not(.active) {
+  background: #fafafa;
+  color: var(--walnut);
+}
+
+.dash-content-view {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Empty State / Cards Styling */
+.empty-msg {
+  color: var(--text-muted);
+  font-family: 'Jost', sans-serif;
+  padding: 40px;
+  text-align: center;
+  border: 1px dashed var(--border-light);
+}
+
+.address-card {
+  background: white;
+  padding: 25px;
+  border: 1px solid var(--border-light);
+  max-width: 400px;
+}
+
+.address-card p {
+  color: var(--text-muted);
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.edit-btn {
+  background: transparent;
+  border: none;
+  color: var(--amber);
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ============================================================
+   NutriNest Member Dashboard — Fully Responsive Logic
+   ============================================================ */
+
+.dash-page {
+  background: var(--ivory);
+  padding: 40px 0 80px;
+  min-height: 100vh;
+}
+
+.dash-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px; /* Padding reduced for smaller screens */
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* ── Sidebar (Desktop) ── */
+.dash-sidebar {
+  background: white;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 30px 0;
+  position: sticky;
+  top: 100px;
+  box-shadow: 0 10px 30px rgba(62, 34, 9, 0.03);
+  z-index: 10;
+}
+
+/* ── Responsive Breakpoints ── */
+
+/* Tablet & Large Mobile (Under 1024px) */
+@media (max-width: 1024px) {
+  .dash-container {
+    grid-template-columns: 1fr; /* Sidebar comes on top */
+    gap: 30px;
+  }
+
+  .dash-sidebar {
+    position: relative;
+    top: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: row; /* Horizontal layout for tablet */
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .user-profile-summary {
+    border-bottom: none;
+    padding: 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .user-avatar-circle {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .user-profile-summary h3 { font-size: 1.1rem; margin: 0; }
+  .user-profile-summary p { font-size: 0.65rem; }
+
+  .dash-nav {
+    flex-direction: row; /* Nav items in a row */
+    padding-top: 0;
+    gap: 5px;
+  }
+
+  .dash-nav button {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    border-left: none;
+    border-bottom: 2px solid transparent; /* Bottom indicator instead of left */
+    white-space: nowrap;
+  }
+
+  .dash-nav button.active {
+    background: transparent;
+    border-bottom-color: var(--amber);
+  }
+}
+
+/* Small Mobile (Under 768px) */
+@media (max-width: 768px) {
+  .dash-sidebar {
+    flex-direction: column; /* Stack profile and nav */
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  /* Make Nav Scrollable on very small screens */
+  .dash-nav {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal swipe */
+    padding-bottom: 5px;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+  }
+
+  .dash-nav::-webkit-scrollbar {
+    height: 3px;
+  }
+  
+  .dash-nav::-webkit-scrollbar-thumb {
+    background: var(--border-light);
+  }
+
+  .dash-content {
+    padding: 0 5px;
+  }
+
+  .sec-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  .order-table th, .order-table td {
+    padding: 15px 10px;
+    font-size: 0.8rem;
+  }
+  
+  /* Address Card full width */
+  .address-card {
+    max-width: 100%;
+  }
+}
+
+/* Extra Small (Under 480px) */
+@media (max-width: 480px) {
+  .dash-page {
+    padding: 20px 0;
+  }
+
+  .dash-container {
+    padding: 0 15px;
+  }
+
+  /* Hide redundant info on mobile if needed */
+  .user-profile-summary p { display: none; }
+
+  /* Table becomes a bit hard on mobile, so we allow horizontal scroll */
+  .order-table-container {
+    margin: 0 -15px;
+    padding: 0 15px;
+  }
+}
+
+/* Symmetrical Animation for Content Switching */
+.dash-content-view {
+  animation: slideUp 0.4s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}

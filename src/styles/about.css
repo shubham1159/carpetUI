@@ -1,0 +1,209 @@
+/* --- LOOM & KNOT THEME VARIABLES --- */
+:root {
+  --lk-teal: #1C3B47; 
+  --lk-gold: #C09D5B; 
+  --lk-text: #536770; 
+  --lk-border: rgba(28, 59, 71, 0.15);
+}
+
+.lk-about-page {
+  background-color: #ffffff;
+}
+
+/* --- COMMON TYPOGRAPHY --- */
+.lk-subtitle-gold {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--lk-gold);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.lk-title-serif {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--lk-teal);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.lk-title-serif-light {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.lk-body-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--lk-text);
+  font-weight: 300;
+}
+
+.bg-light-gray {
+  background-color: #FAFAFA;
+}
+
+/* --- HERO SECTION --- */
+.lk-about-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.lk-about-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.lk-about-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.lk-about-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 59, 71, 0.6); /* Deep teal translucent overlay */
+}
+
+/* --- STORY SECTION --- */
+.lk-story-img-wrapper {
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.lk-story-img {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: -20px 20px 0 0 rgba(192, 157, 91, 0.1); /* Subtle gold offset shadow */
+}
+
+.lk-experience-badge {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background-color: var(--lk-teal);
+  color: #ffffff;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.lk-experience-badge h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--lk-gold);
+}
+
+.lk-experience-badge span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* --- PILLARS SECTION --- */
+.lk-pillar-icon {
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--lk-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: var(--lk-teal);
+  transition: all 0.3s ease;
+}
+
+.lk-pillar-icon:hover {
+  background-color: var(--lk-gold);
+  color: #ffffff;
+}
+
+.lk-pillar-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--lk-teal);
+}
+
+/* --- CTA SECTION --- */
+.lk-cta-section {
+  border-top: 1px solid var(--lk-border);
+}
+
+.lk-btn-solid-teal {
+  background-color: var(--lk-teal);
+  color: #ffffff;
+  border: 1px solid var(--lk-teal);
+  padding: 16px 35px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.lk-btn-solid-teal:hover {
+  background-color: var(--lk-gold);
+  border-color: var(--lk-gold);
+  color: #ffffff;
+}
+
+.lk-btn-outline-teal {
+  background-color: transparent;
+  color: var(--lk-teal);
+  border: 1px solid var(--lk-teal);
+  padding: 16px 35px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.lk-btn-outline-teal:hover {
+  background-color: var(--lk-teal);
+  color: #ffffff;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .lk-title-serif {
+    font-size: 2.2rem;
+  }
+  .lk-about-hero {
+    height: 40vh;
+  }
+  .lk-experience-badge {
+    bottom: -10px;
+    left: 0;
+    padding: 20px;
+  }
+  .lk-story-img-wrapper {
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,278 @@
+/* Gifting.css */
+
+.gifting-page {
+  background: var(--ivory);
+}
+
+.gift-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ── Hero Split Logic ── */
+.gifting-hero {
+  background: #1a1a1a; /* Dark Luxury Background */
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.gold-tag {
+  font-family: 'Jost', sans-serif;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.8rem;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.gift-main-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.gift-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 500px;
+  margin-bottom: 40px;
+}
+
+.gift-hero-btns {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-primary-gold {
+  background: var(--amber);
+  color: var(--walnut);
+  border: none;
+  padding: 15px 35px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-outline-white {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 15px 35px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.gift-hero-image {
+  height: 100%;
+  position: relative;
+}
+
+.gift-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+/* ── Steps Logic ── */
+.gift-steps {
+  padding: 100px 0;
+  background: white;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.step-item {
+  text-align: center;
+}
+
+.step-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  color: var(--amber);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 20px;
+  opacity: 0.3;
+}
+
+.step-item h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--walnut);
+  margin-bottom: 15px;
+}
+
+.step-item p {
+  color: var(--text-muted);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ── Grid Section ── */
+.gift-collection {
+  padding: 100px 0;
+}
+
+.gift-sec-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sec-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  color: var(--walnut);
+}
+
+.gold-line {
+  width: 60px;
+  height: 2px;
+  background: var(--amber);
+  margin: 20px auto 0;
+}
+
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .hero-split { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .gift-hero-image { height: 400px; order: -1; }
+  .gift-subtitle { margin: 0 auto 40px; }
+  .gift-hero-btns { justify-content: center; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .gift-grid { grid-template-columns: repeat(2, 1fr); }
+}/* ── Luxury Hero Section (Light & Elegant Version) ── */
+.gifting-hero {
+  background: var(--parchment); /* Light Creamy Background */
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* Subtle texture pattern for premium feel */
+.gifting-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.4;
+  background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+}
+
+.hero-split {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.gold-tag {
+  font-family: 'Jost', sans-serif;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.8rem;
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.gift-main-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 5vw, 4rem);
+  color: var(--walnut); /* Dark Brown instead of White */
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.gift-subtitle {
+  color: var(--text-secondary); /* Greyish-Brown instead of White-transparent */
+  font-family: 'Jost', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 520px;
+  margin-bottom: 35px;
+}
+
+.gift-hero-btns {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary-gold {
+  background: var(--walnut); /* Walnut Button */
+  color: white;
+  border: none;
+  padding: 16px 38px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-gold:hover {
+  background: var(--amber);
+  transform: translateY(-3px);
+}
+
+.btn-outline-white {
+  background: transparent;
+  border: 1px solid var(--walnut); /* Walnut Border instead of White */
+  color: var(--walnut);
+  padding: 16px 38px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-white:hover {
+  background: rgba(62, 34, 9, 0.05);
+}
+
+.gift-hero-image img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 8px; /* Slightly more rounded */
+  box-shadow: 20px 20px 0px var(--amber-light); /* Decorative Offset Shadow */
+}

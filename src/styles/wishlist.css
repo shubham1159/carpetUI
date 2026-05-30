@@ -1,0 +1,145 @@
+/* --- LOOM & KNOT THEME VARIABLES --- */
+:root {
+  --lk-teal: #1C3B47; 
+  --lk-gold: #C09D5B; 
+  --lk-text: #536770; 
+  --lk-border: rgba(28, 59, 71, 0.15);
+}
+
+/* --- OFFCANVAS BASE --- */
+.lk-wishlist-offcanvas {
+  background-color: #ffffff;
+  border-left: 1px solid var(--lk-border);
+}
+
+.lk-offcanvas-header {
+  border-bottom: 1px solid var(--lk-border);
+}
+
+.lk-wishlist-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--lk-teal);
+  letter-spacing: 0.15em;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.lk-wishlist-count {
+  color: var(--lk-gold);
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+.lk-btn-close-minimal {
+  background: transparent;
+  border: none;
+  color: var(--lk-teal);
+  transition: transform 0.3s ease, color 0.3s ease;
+  padding: 0;
+}
+
+.lk-btn-close-minimal:hover {
+  color: var(--lk-gold);
+  transform: rotate(90deg);
+}
+
+/* --- WISHLIST ITEMS --- */
+.lk-wish-item-luxury {
+  border-bottom: 1px solid var(--lk-border);
+}
+
+.lk-wish-img-box {
+  width: 90px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.lk-wish-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.lk-item-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--lk-teal);
+  line-height: 1.2;
+}
+
+.lk-item-price {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--lk-teal);
+}
+
+.lk-remove-btn {
+  background: transparent;
+  border: none;
+  color: var(--lk-text);
+  transition: color 0.3s ease;
+  padding: 0;
+}
+
+.lk-remove-btn:hover {
+  color: #d9534f;
+}
+
+/* --- MOVE TO BAG BUTTON --- */
+.lk-btn-add-to-bag-sm {
+  background: transparent;
+  border: 1px solid var(--lk-teal);
+  color: var(--lk-teal);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 8px 15px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.lk-btn-add-to-bag-sm:hover {
+  background-color: var(--lk-gold);
+  border-color: var(--lk-gold);
+  color: #ffffff;
+}
+
+/* --- EMPTY WISHLIST --- */
+.lk-empty-icon {
+  color: var(--lk-teal);
+  opacity: 0.3;
+}
+
+.lk-empty-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--lk-teal);
+  letter-spacing: 0.15em;
+}
+
+.lk-btn-discover-luxury {
+  background-color: var(--lk-teal);
+  color: #ffffff;
+  border: 1px solid var(--lk-teal);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  padding: 12px 30px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.lk-btn-discover-luxury:hover {
+  background-color: var(--lk-gold);
+  border-color: var(--lk-gold);
+}

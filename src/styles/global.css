@@ -1,0 +1,36 @@
+@import "./variables.css";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap');
+
+
+/* --- Premium Paper Texture Overlay --- */
+body {
+    background-color: #FAF9F6; /* Base Cream Color */
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* Yeh noise texture hai jo paper feel dega */
+    background-image: url("https://www.transparenttextures.com/patterns/p6.png"); 
+    opacity: 0.4; /* Bilkul subtle rakhna hai */
+    pointer-events: none; /* Takki links click karne mein problem na ho */
+    z-index: 9999;
+    mix-blend-mode: multiply;
+}
+a,
+li {
+  text-decoration: none;
+  color: inherit;
+  list-style: none;
+}
+
+body, html{
+  overflow-x: hidden;
+}
+
+

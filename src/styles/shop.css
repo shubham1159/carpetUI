@@ -1,0 +1,192 @@
+/* --- LOOM & KNOT THEME VARIABLES --- */
+:root {
+  --lk-teal: #1C3B47; 
+  --lk-gold: #C09D5B; 
+  --lk-text: #536770; 
+  --lk-light-border: rgba(28, 59, 71, 0.1);
+}
+
+/* --- PAGE BASE --- */
+.lk-shop-page {
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+/* --- SIDEBAR FILTERS --- */
+.lk-filter-sidebar {
+  padding-right: 30px;
+}
+
+.lk-sidebar-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--lk-teal);
+  border-bottom: 1px solid var(--lk-light-border);
+  padding-bottom: 15px;
+}
+
+.lk-filter-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--lk-gold);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Custom Checkboxes */
+.lk-check-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.lk-check-input {
+  display: none; /* Hide default browser checkbox */
+}
+
+.lk-check-box {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--lk-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+/* Checkmark effect */
+.lk-check-box::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: var(--lk-gold);
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+.lk-check-input:checked + .lk-check-box {
+  border-color: var(--lk-gold);
+}
+
+.lk-check-input:checked + .lk-check-box::after {
+  transform: scale(1);
+}
+
+.lk-check-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  color: var(--lk-text);
+  transition: color 0.2s ease;
+}
+
+.lk-check-wrap:hover .lk-check-text,
+.lk-check-input:checked ~ .lk-check-text {
+  color: var(--lk-teal);
+  font-weight: 500;
+}
+
+/* Range Slider */
+.lk-range-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  background: var(--lk-light-border);
+  outline: none;
+}
+
+.lk-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--lk-gold);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.lk-range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.lk-price-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  color: var(--lk-text);
+  font-weight: 500;
+}
+
+.lk-price-text-active {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  color: var(--lk-teal);
+  font-weight: 600;
+}
+
+/* Apply Button */
+.lk-btn-apply-filters {
+  width: 100%;
+  background-color: var(--lk-teal);
+  color: #fff;
+  border: 1px solid var(--lk-teal);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  padding: 15px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.lk-btn-apply-filters:hover {
+  background-color: var(--lk-gold);
+  border-color: var(--lk-gold);
+}
+
+/* --- MAIN CONTENT HEADER --- */
+.lk-border-bottom {
+  border-bottom: 1px solid var(--lk-light-border);
+}
+
+.lk-results-count {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  color: var(--lk-text);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.lk-sort-select {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  color: var(--lk-teal);
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* --- MOBILE SPECIFIC --- */
+.lk-btn-filter-mobile {
+  width: 100%;
+  background-color: transparent;
+  color: var(--lk-teal);
+  border: 1px solid var(--lk-teal);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}

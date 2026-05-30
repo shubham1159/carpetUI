@@ -1,0 +1,171 @@
+/* --- LOOM & KNOT THEME COLORS --- */
+:root {
+  --lk-teal: #1C3B47; /* Deep Teal from the outer knots and text */
+  --lk-gold: #C09D5B; /* Elegant Gold from the center lotus background */
+  --lk-text: #536770; /* Muted teal-grey for readable paragraph text */
+}
+
+/* Section Base */
+.modern-category-section {
+  padding: 100px 0;
+  background-color: #ffffff;
+  overflow: hidden; /* Prevent horizontal scroll */
+}
+
+/* --- LEFT SIDE: TEXT & CONTROLS --- */
+.category-info-wrapper {
+  padding-right: 40px;
+}
+
+.cat-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  color: var(--lk-gold); /* Brand Gold */
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: block;
+  font-weight: 600;
+}
+
+.cat-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--lk-teal); /* Brand Teal */
+  line-height: 1.1;
+  margin-bottom: 30px;
+  letter-spacing: 0.02em;
+}
+
+.cat-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: var(--lk-text); /* Muted text matching theme */
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Custom Navigation Arrows */
+.cat-nav-arrows {
+  display: flex;
+  gap: 15px;
+}
+
+.cat-btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--lk-teal); /* Brand Teal Border */
+  background: transparent;
+  color: var(--lk-teal); /* Brand Teal Arrow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cat-btn:hover {
+  background: var(--lk-gold); /* Brand Gold on Hover */
+  border-color: var(--lk-gold);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.cat-btn.swiper-button-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: #ccc;
+  color: #ccc;
+  background: transparent;
+}
+
+/* --- RIGHT SIDE: SWIPER SLIDER --- */
+.cat-swiper-container {
+  /* Slider ko right screen edge tak extend karne ke liye */
+  margin-right: -15px; 
+}
+
+/* Card Styling */
+.modern-cat-card {
+  position: relative;
+  width: 100%;
+  height: 65vh; 
+  min-height: 450px;
+  overflow: hidden;
+  cursor: grab;
+  border-radius: 4px; /* Slight rounding for a softer, premium feel */
+}
+
+.modern-cat-card:active {
+  cursor: grabbing;
+}
+
+.cat-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Gradient Overlay */
+.cat-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Slightly teal-tinted dark gradient for better blend */
+  background: linear-gradient(180deg, rgba(28, 59, 71, 0) 40%, rgba(28, 59, 71, 0.85) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px 30px;
+  transition: opacity 0.4s ease;
+}
+
+/* Card Text */
+.card-title {
+  font-family: 'Cormorant Garamond', serif;
+  color: #fff;
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.card-explore {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  color: var(--lk-gold); /* Brand Gold */
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  font-weight: 600;
+}
+
+/* Hover Interactions */
+.modern-cat-card:hover .cat-img {
+  transform: scale(1.05);
+}
+
+.modern-cat-card:hover .card-title,
+.modern-cat-card:hover .card-explore {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Adjustments for Mobile */
+@media (max-width: 991px) {
+  .category-info-wrapper {
+    margin-bottom: 50px;
+    padding-right: 0;
+  }
+  .modern-cat-card {
+    height: 50vh;
+    min-height: 350px;
+  }
+}

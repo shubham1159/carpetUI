@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
+
+/* Core Base Page Settings */
+.wedding-page-root {
+  background-color: #ffffff !important; /* Premium Crisp White */
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Headings Configuration matching existing styles */
+.section-subtitle {
+  color: #ff002b !important; /* Theme Red Pop */
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.wedding-main-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  color: #000000;
+}
+
+.perf-red-line {
+  width: 60px;
+  height: 3px;
+  background-color: #ff002b;
+}
+
+/* Luxury Sharp Action Link Button */
+.wedding-action-btn {
+  display: inline-block;
+  background-color: #000000;
+  color: #ffffff !important;
+  border: 1px solid #000000;
+  padding: 14px 32px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wedding-action-btn:hover {
+  background-color: #ff002b;
+  border-color: #ff002b;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 0, 43, 0.25);
+}
+
+/* Hero Section Image Layer Layout */
+.wedding-hero-img-box {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.wedding-pic {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.06);
+}
+
+/* Image Badge Style Overlay */
+.wedding-img-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #ff002b; /* Red block popping on image */
+  color: #ffffff;
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* =========================================================
+   AUTOPLAYING SHOWREEL GRID ITEMS
+   ========================================================= */
+.wedding-video-card {
+  border: 1px solid #eaeaea;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wedding-video-box {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Screen standard */
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.wedding-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wedding-video-tag {
+  color: #ff002b;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.wedding-video-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: -0.5px;
+}
+
+/* Video Card Hover Effects */
+.wedding-video-card:hover {
+  transform: translateY(-8px);
+  border-color: #ff002b !important;
+  box-shadow: 0 20px 40px rgba(255, 0, 43, 0.05) !important;
+}
+
+/* =========================================================
+   PACKAGES LAYOUT ARCHITECTURE
+   ========================================================= */
+.wedding-package-card {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.pkg-title {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #000000;
+  letter-spacing: -0.5px;
+}
+
+.pkg-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.pkg-divider {
+  height: 2px;
+  width: 40px;
+  background-color: #000000;
+  transition: width 0.4s ease, background-color 0.4s ease;
+}
+
+.pkg-features-list li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.text-red-accent {
+  color: #ff002b !important;
+}
+
+/* Packages Card Hover Physics */
+.wedding-package-card:hover {
+  transform: translateY(-8px);
+  border-color: #ff002b !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.05) !important;
+}
+
+.wedding-package-card:hover .pkg-divider {
+  width: 100%; /* Line completely expands to full on grid item hover */
+  background-color: #ff002b; /* Changes to energetic red */
+}
+
+/* Mobile Screen Fluid Scale Adjusters */
+@media (max-width: 991.98px) {
+  .wedding-main-title {
+    font-size: 2.1rem;
+  }
+  .wedding-pic {
+    height: 320px;
+  }
+}

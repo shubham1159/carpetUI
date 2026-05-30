@@ -1,0 +1,90 @@
+.coupon-v2-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.coupon-v2-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 30px;
+    position: relative;
+    border: 1px solid #f0f0f0;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Hover Effect: Card thoda glow karega */
+.coupon-v2-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 123, 255, 0.1);
+    border-color: rgba(0, 123, 255, 0.2);
+}
+
+.discount-circle {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+}
+
+.coupon-v2-card h4 {
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.coupon-v2-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.coupon-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8f9fa;
+    padding: 12px 20px;
+    border-radius: 16px;
+    border: 1px dashed #ced4da;
+}
+
+.coupon-v2-code {
+    font-family: 'Space Mono', monospace; /* Professional Monospace font */
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 1px;
+}
+
+.btn-copy-v2 {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-copy-v2:hover {
+    background: #007bff;
+}
+
+/* Background light glow decoration */
+.coupon-v2-card::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 60px; height: 60px;
+    background: radial-gradient(circle at top right, rgba(0, 123, 255, 0.1), transparent);
+    border-radius: 0 24px 0 100%;
+}

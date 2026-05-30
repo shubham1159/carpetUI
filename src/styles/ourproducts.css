@@ -1,0 +1,77 @@
+/* --- OUR PRODUCTS SECTION --- */
+.our-products-section {
+  padding: 100px 0;
+  background-color: #FAFAFA; /* Very light off-white to maintain clean separation */
+}
+
+/* --- PREMIUM FILTER TABS --- */
+.filter-tabs-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.filter-btn {
+  background: transparent;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--lk-text); /* Brand Muted Text */
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Underline Animation */
+.filter-btn::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--lk-gold); /* Brand Gold Underline */
+  transition: width 0.3s ease;
+}
+
+.filter-btn:hover {
+  color: var(--lk-teal); /* Brand Teal on hover */
+}
+
+/* Active State */
+.filter-btn.active {
+  color: var(--lk-teal); /* Brand Teal for active tab */
+  font-weight: 600;
+}
+
+.filter-btn.active::after {
+  width: 100%;
+}
+
+/* Fade In Animation for Products */
+.product-fade-in {
+  animation: fadeInProduct 0.5s ease-in-out;
+}
+
+@keyframes fadeInProduct {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .filter-tabs-container {
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+  .filter-btn {
+    font-size: 0.75rem;
+  }
+}

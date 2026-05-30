@@ -1,0 +1,162 @@
+/* --- LOOM & KNOT THEME VARIABLES --- */
+:root {
+  --lk-teal: #1C3B47; 
+  --lk-gold: #C09D5B; 
+  --lk-text: #536770; 
+  --lk-border: rgba(28, 59, 71, 0.15);
+}
+
+/* --- OFFCANVAS OVERLAY --- */
+.lk-search-offcanvas {
+  background-color: rgba(255, 255, 255, 0.98); /* Solid white, slightly frosted */
+  backdrop-filter: blur(15px);
+  height: 100vh !important; /* Full screen for a luxury cinematic feel */
+  border: none;
+}
+
+/* --- CLOSE BUTTON --- */
+.lk-btn-close {
+  background: none;
+  border: none;
+  color: var(--lk-teal);
+  cursor: pointer;
+  transition: transform 0.4s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.lk-btn-close:hover {
+  color: var(--lk-gold);
+  transform: rotate(90deg); /* Sleek spin animation on hover */
+}
+
+/* --- SEARCH INPUT BOX --- */
+.lk-search-input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid var(--lk-teal);
+  padding-bottom: 15px;
+  margin-top: 8vh;
+}
+
+.lk-search-field {
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--lk-teal);
+  outline: none;
+}
+
+.lk-search-field::placeholder {
+  color: rgba(28, 59, 71, 0.25);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+}
+
+.lk-search-submit-btn {
+  background: none;
+  border: none;
+  color: var(--lk-teal);
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.lk-search-submit-btn:hover {
+  color: var(--lk-gold);
+  transform: scale(1.1);
+}
+
+/* --- SUGGESTIONS --- */
+.lk-suggestion-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--lk-gold);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.lk-trending-link {
+  background: transparent;
+  border: 1px solid var(--lk-border);
+  padding: 12px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--lk-text);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.lk-tag-arrow {
+  margin-left: 8px;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.lk-trending-link:hover {
+  border-color: var(--lk-teal);
+  color: var(--lk-teal);
+  background-color: #FAFAFA;
+}
+
+.lk-trending-link:hover .lk-tag-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --- RESULTS PREVIEW --- */
+.lk-search-results-overlay {
+  border-top-color: var(--lk-border) !important;
+}
+
+.lk-results-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--lk-text);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.lk-highlight-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--lk-teal);
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-left: 5px;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .lk-search-field {
+    font-size: 1.8rem;
+  }
+  .lk-search-field::placeholder {
+    font-size: 0.85rem;
+  }
+  .lk-search-input-box {
+    margin-top: 2vh;
+  }
+  .lk-trending-link {
+    font-size: 0.75rem;
+    padding: 10px 15px;
+  }
+}

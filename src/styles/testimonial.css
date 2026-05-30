@@ -1,0 +1,136 @@
+/* --- LOOM & KNOT THEME VARIABLES --- */
+:root {
+  --lk-teal: #1C3B47; 
+  --lk-gold: #C09D5B; 
+  --lk-text: #536770; 
+}
+
+/* --- SECTION BACKGROUND --- */
+.monolith-testimonial-section {
+  background-color: #FAFAFA; /* Very light off-white for editorial feel */
+  position: relative;
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+/* --- MASSIVE BACKGROUND QUOTE --- */
+.bg-quote-icon {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15rem; /* Massive size */
+  color: var(--lk-gold);
+  opacity: 0.05; /* Barely visible, acts as a watermark */
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* --- HEADERS --- */
+.section-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--lk-gold);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+/* --- MONOLITH CARD (Clean, no borders) --- */
+.monolith-swiper {
+  position: relative;
+  z-index: 2;
+  padding-top: 20px;
+}
+
+.monolith-card {
+  padding: 0 20px;
+}
+
+.monolith-quote-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--lk-teal);
+  line-height: 1.4;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+/* --- AUTHOR PROFILE --- */
+.monolith-author-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.monolith-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--lk-gold);
+  padding: 3px;
+  background-color: transparent;
+}
+
+.monolith-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--lk-teal);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.monolith-role {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  color: var(--lk-text);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* --- CUSTOM NAVIGATION ARROWS --- */
+.monolith-navigation {
+  position: relative;
+  z-index: 2;
+}
+
+.monolith-nav-btn {
+  background: transparent;
+  border: none;
+  color: var(--lk-teal);
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+}
+
+.monolith-nav-btn:hover {
+  color: var(--lk-gold);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.monolith-nav-btn.swiper-button-disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .monolith-quote-text {
+    font-size: 1.8rem;
+  }
+  .bg-quote-icon {
+    font-size: 10rem;
+    top: 5%;
+  }
+}

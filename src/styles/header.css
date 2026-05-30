@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@300;400;500&display=swap');
+
+/* Header Base & Scroll Animation */
+.indo-western-header {
+  background-color: #F9F9F7;
+  height: 85px; /* Perfect balanced height */
+  border-bottom: 1px solid #f0f0f0;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); /* Smooth slide effect */
+  font-family: 'Montserrat', sans-serif;
+  z-index: 1000;
+}
+
+/* Scroll Classes Triggered by React */
+.nav-visible {
+  transform: translateY(0);
+}
+
+.nav-hidden {
+  transform: translateY(-100%);
+  box-shadow: none;
+}
+
+.indo-western-header .container-fluid,
+.indo-western-header .d-flex {
+  height: 100%;
+}
+
+/* --- LOGO --- */
+.brand-logo {
+  font-family: 'Cormorant Garamond', serif; /* Global luxury serif */
+  font-size: 2rem;
+  font-weight: 600;
+  color: #111111;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.brand-logo img {
+  height: 70px; /* Premium look ke liye 40px - 55px best rehta hai */
+  width: auto;  /* Isse logo apna original ratio maintain karega */
+  object-fit: contain; /* Quality kharab nahi hone dega */
+  display: block; /* Extra bottom spacing (ghost space) ko remove karega */
+}
+
+/* Mobile pe thoda chota dikhane ke liye (Optional but recommended) */
+@media (max-width: 991px) {
+  .brand-logo img {
+    height: 65px; 
+  }
+}
+/* --- NAV LINKS --- */
+.nav-link-global {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #444;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  transition: color 0.3s;
+}
+
+.nav-link-global:hover {
+  color: #B89B72; /* Muted Brass - The Subtle Indian Touch */
+}
+
+/* --- DROPDOWN (Hover based) --- */
+.dropdown-global {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 85px;
+  left: -20px;
+  background: #ffffff;
+  min-width: 220px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid #B89B72;
+}
+
+.dropdown-global:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-content a {
+  padding: 15px 25px;
+  color: #333;
+  font-size: 0.8rem;
+  text-decoration: none;
+  border-bottom: 1px solid #fafafa;
+  transition: 0.2s;
+  letter-spacing: 0.05em;
+}
+
+.dropdown-content a:hover {
+  background: #fdfdfd;
+  color: #B89B72;
+  padding-left: 30px;
+}
+
+/* --- ICONS --- */
+.global-icon {
+  color: #111;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.global-icon:hover {
+  color: #B89B72;
+}
+
+/* Minimalist Cart Dot instead of numbers */
+.cart-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-dot {
+  position: absolute;
+  bottom: 0;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background: #B89B72;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+}
+
+/* --- MOBILE MENU --- */
+.mobile-toggle {
+  background: none;
+  border: none;
+  color: #111;
+}
+
+.mobile-menu-global {
+  position: fixed;
+  top: 85px;
+  left: -100%;
+  width: 100%;
+  height: calc(100vh - 85px);
+  background: #fff;
+  transition: left 0.4s ease-in-out;
+  z-index: 999;
+  padding: 40px;
+}
+
+.mobile-menu-global.open {
+  left: 0;
+}
+
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.mobile-links a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+/* Update this class in your CSS */
+.brand-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10; /* Taaki click hone mein issue na aaye */
+}

@@ -1,0 +1,149 @@
+/* --- LOOM & KNOT THEME VARIABLES --- */
+:root {
+  --lk-teal: #1C3B47; 
+  --lk-gold: #C09D5B; 
+  --lk-text: #536770; 
+}
+
+/* --- SECTION BASE --- */
+.archive-sale-section {
+  background-color: #FAFAFA; /* Off-white to distinguish the section */
+
+  border-top: 1px solid rgba(28, 59, 71, 0.1);
+  border-bottom: 1px solid rgba(28, 59, 71, 0.1);
+}
+
+/* --- HEADER WRAPPER --- */
+.archive-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.archive-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--lk-gold);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.archive-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--lk-teal);
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+/* --- TIMER AREA --- */
+.archive-timer-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.timer-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--lk-text);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Reusing your Timer CSS logic from the previous snippet */
+.dod-timer-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dod-time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid rgba(28, 59, 71, 0.1);
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+}
+
+.dod-time-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--lk-teal);
+  line-height: 1;
+}
+
+.dod-time-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: var(--lk-text);
+  letter-spacing: 0.1em;
+  margin-top: 3px;
+}
+
+.dod-time-separator {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  color: var(--lk-teal);
+  padding-bottom: 10px;
+}
+
+/* --- CUSTOM SWIPER NAVIGATION --- */
+.archive-nav-btn {
+  background: transparent;
+  border: 1px solid var(--lk-teal);
+  color: var(--lk-teal);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.archive-nav-btn:hover {
+  background-color: var(--lk-gold);
+  border-color: var(--lk-gold);
+  color: #ffffff;
+}
+
+.archive-nav-btn.swiper-button-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: #ccc;
+  color: #ccc;
+  background: transparent;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .archive-header-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .archive-timer-area {
+    align-items: flex-start;
+  }
+  .archive-title {
+    font-size: 2.5rem;
+  }
+  .archive-navigation-wrapper {
+    justify-content: center !important;
+  }
+}

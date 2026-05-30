@@ -1,0 +1,56 @@
+/* --- LOOM & KNOT THEME VARIABLES --- */
+:root {
+  --lk-teal: #1C3B47; 
+  --lk-gold: #C09D5B; 
+  --lk-text: #536770; 
+}
+
+/* --- SECTION BASE --- */
+.related-products-section {
+  background-color: #FAFAFA; /* Light off-white to contrast with the white detail page */
+  padding: 100px 0;
+  border-top: 1px solid rgba(28, 59, 71, 0.1); /* Subtle teal border on top */
+}
+
+/* --- HEADER --- */
+.related-header {
+  margin-bottom: 60px;
+}
+
+.related-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--lk-gold);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.related-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: var(--lk-teal);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.related-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: var(--lk-text);
+  max-width: 600px;
+  line-height: 1.8;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .related-products-section {
+    padding: 60px 0;
+  }
+  .related-title {
+    font-size: 2.5rem;
+  }
+}

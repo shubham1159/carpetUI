@@ -1,0 +1,230 @@
+/* --- LOOM & KNOT THEME VARIABLES --- */
+:root {
+  --lk-teal: #1C3B47; 
+  --lk-gold: #C09D5B; 
+  --lk-text: #536770; 
+}
+
+/* --- PAGE BASE --- */
+.lumina-detail-page {
+  padding: 170px 0;
+  background-color: #ffffff;
+}
+
+/* --- GALLERY (LEFT SIDE) --- */
+.gallery-sticky-wrap {
+  position: sticky;
+  top: 100px;
+}
+
+.main-img-wrap img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.thumb-slider-premium {
+  margin-top: 15px;
+}
+
+.thumb-img-wrap-minimal {
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 120px;
+}
+
+.swiper-slide-thumb-active .thumb-img-wrap-minimal {
+  border-color: var(--lk-gold);
+}
+
+.thumb-img-wrap-minimal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-slide-thumb-active .thumb-img-wrap-minimal img,
+.thumb-img-wrap-minimal:hover img {
+  opacity: 1;
+}
+
+/* --- PRODUCT INFO (RIGHT SIDE) --- */
+.detail-content-minimal {
+  padding-left: 20px;
+}
+
+.premium-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  background-color: var(--lk-teal);
+  color: #fff;
+  padding: 5px 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.brand-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  color: var(--lk-gold);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.title-serif-lg {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  color: var(--lk-teal);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+/* Pricing */
+.detail-price-minimal {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.price-now-detail {
+  /* font-family: 'Cormorant Garamond', serif; */
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--lk-teal);
+}
+
+.price-was-detail {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #a0a0a0;
+  text-decoration: line-through;
+}
+
+.divider-minimal {
+  width: 50px;
+  height: 2px;
+  background-color: var(--lk-gold);
+}
+
+.description-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: var(--lk-text);
+  line-height: 1.8;
+}
+
+/* Attributes */
+.attr-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  color: var(--lk-text);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.text-gold {
+  color: var(--lk-gold);
+}
+
+/* --- BUTTONS & ACTIONS --- */
+.action-row {
+  flex-wrap: wrap;
+}
+
+.qty-selector-minimal {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--lk-teal);
+  padding: 12px 15px;
+  height: 52px;
+}
+
+.qty-selector-minimal button {
+  background: none;
+  border: none;
+  color: var(--lk-teal);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.qty-val {
+  margin: 0 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--lk-teal);
+}
+
+.btn-add-luxury {
+  background-color: var(--lk-teal);
+  color: #fff;
+  border: 1px solid var(--lk-teal);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  height: 52px;
+  font-weight: 500;
+}
+
+.btn-add-luxury:hover {
+  background-color: var(--lk-gold);
+  border-color: var(--lk-gold);
+}
+
+.btn-wishlist-minimal {
+  background: none;
+  border: 1px solid var(--lk-teal);
+  color: var(--lk-teal);
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.btn-wishlist-minimal:hover {
+  background-color: var(--lk-gold);
+  border-color: var(--lk-gold);
+  color: #fff;
+}
+
+/* --- TRUST BADGES --- */
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  color: var(--lk-text);
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 991px) {
+  .detail-content-minimal {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  .main-img-wrap img {
+    height: 450px;
+  }
+  .title-serif-lg {
+    font-size: 2.5rem;
+  }
+}
